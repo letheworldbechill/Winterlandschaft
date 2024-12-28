@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Oberer Transparenter Bereich -->
+    <div class="top-bar"></div>
+
+    <!-- Titelbereich -->
+    <header>
+        <h1>Meine Aufgaben</h1>
+    </header>
+
+    <!-- Hauptbereich mit Dringenden und Bald Aufgaben -->
+    <main>
+        <section class="tasks-section">
+            <div class="task-category" id="urgent-category">
+                <h2>Dringend</h2>
+                <ul id="urgent-tasks" class="task-list">
+                    <!-- Halbtransparente Felder 1-10 als Beispielaufgaben -->
+                    <li class="task-item">Aufgabe 1</li>
+                    <li class="task-item">Aufgabe 2</li>
+                    <li class="task-item">Aufgabe 3</li>
+                    <li class="task-item">Aufgabe 4</li>
+                    <li class="task-item">Aufgabe 5</li>
+                    <li class="task-item">Aufgabe 6</li>
+                    <li class="task-item">Aufgabe 7</li>
+                    <li class="task-item">Aufgabe 8</li>
+                    <li class="task-item">Aufgabe 9</li>
+                    <li class="task-item">Aufgabe 10</li>
+                </ul>
+            </div>
+            <div class="task-category" id="soon-category">
+                <h2>Bald</h2>
+                <ul id="soon-tasks" class="task-list">
+                    <!-- Halbtransparente Felder 1-10 als Beispielaufgaben -->
+                    <li class="task-item">Aufgabe 1</li>
+                    <li class="task-item">Aufgabe 2</li>
+                    <li class="task-item">Aufgabe 3</li>
+                    <li class="task-item">Aufgabe 4</li>
+                    <li class="task-item">Aufgabe 5</li>
+                    <li class="task-item">Aufgabe 6</li>
+                    <li class="task-item">Aufgabe 7</li>
+                    <li class="task-item">Aufgabe 8</li>
+                    <li class="task-item">Aufgabe 9</li>
+                    <li class="task-item">Aufgabe 10</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Menübereich zum Hinzufügen neuer Aufgaben -->
+    <footer>
+        <button id="add-urgent" class="add-button">+ Dringend</button>
+        <button id="add-soon" class="add-button">+ Bald</button>
+        <button id="view-completed" class="add-button">✓ Erledigte</button>
+    </footer>
+
+    <!-- Modal für neue Aufgabe -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Neue Aufgabe hinzufügen</h2>
+            <input type="text" id="task-input" placeholder="Aufgabentitel">
+            <select id="task-category-select">
+                <option value="urgent">Dringend</option>
+                <option value="soon">Bald</option>
+            </select>
+            <button id="save-task">Hinzufügen</button>
+        </div>
+    </div>
+
+    <!-- Modal für erledigte Aufgaben -->
+    <div id="completed-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Erledigte Aufgaben</h2>
+            <ul id="completed-tasks" class="task-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
